@@ -23,7 +23,7 @@ export const eventosFiltradosState = selector({
 export const eventosAsync = selector({
     key: "eventosAsync",
     get: async () => {
-        const respostaHttp = await fetch('http://localhost:8080/eventos')
+        const respostaHttp = await fetch('https://my-json-server.typicode.com/jhon3k/aluraEvent-api/eventos')
         const eventosJson: IEvento[] = await respostaHttp.json()
     return eventosJson.map(evento => ({
         ...evento,
